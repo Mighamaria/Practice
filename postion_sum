@@ -4,7 +4,7 @@ input N=5,S=12,A=[1,2,3,7,5]
 output:1st postion to 3rd postion 
         3rd postion to 4th position*/
 
-solution
+1.solution1 index only
 
 def subarraySum(N,S,A):
     for j in range(0,N):
@@ -21,4 +21,23 @@ for i in range(n):
     a=int(input("enter the inputs:"))
     b.append(a)
 print(b)
+subarraySum(n,s,b)  
+
+2.solution2 in the form subarray
+
+def subarraySum(N,S,A):
+    res=[]
+    for j in range(len(A)):
+        res.append(A[j])
+        while(sum(res)>S):
+            res.pop(0)
+        if sum(res)==S:
+            print(res)
+        
+n=int(input("enter the length of list:"))
+s=int(input("enter the sum:"))
+b=[]
+for i in range(n):
+    a=int(input("enter the inputs:"))
+    b.append(a)
 subarraySum(n,s,b)  
