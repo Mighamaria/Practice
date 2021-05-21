@@ -1,0 +1,24 @@
+/*given an unsorted array A,with N length ,find a continous  subarray, such that the sum of that continous subarray equal to given sum
+exm:
+input N=5,S=12,A=[1,2,3,7,5]
+output:1st postion to 3rd postion 
+        3rd postion to 4th position*/
+
+solution
+
+def subarraySum(N,S,A):
+    for j in range(0,N):
+        su=A[j]
+        for k in range(j+1,N):
+            su=su+A[k]
+            if su==S:
+                print("sum found btw:",j,k)
+                break
+n=int(input("enter the length of list:"))
+s=int(input("enter the sum:"))
+b=[]
+for i in range(n):
+    a=int(input("enter the inputs:"))
+    b.append(a)
+print(b)
+subarraySum(n,s,b)  
