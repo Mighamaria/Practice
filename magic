@@ -31,6 +31,6 @@ def the_magic(num):
    else:
        return -1
 n=int(input()
-num=list(map(int,input().split(' ',n-1)))
+num=list(map(int,input().split()))
 print(the_magic(num))
 
